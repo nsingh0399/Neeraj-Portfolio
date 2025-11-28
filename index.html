@@ -1,211 +1,371 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neeraj Singh | Portfolio</title>
+  <title>Neeraj Singh | Android Developer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- ===== Navigation ===== -->
-  <nav>
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#techstack">Tech Stack</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#activities">Activities</a>
-    <a href="#stats">Stats</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="#hero" class="logo">
+          <span class="logo-mark">&lt;/&gt;</span>
+          <span class="logo-text">Neeraj<span>Singh</span></span>
+        </a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <div class="nav-right" id="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#techstack" class="nav-link">Tech Stack</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#activities" class="nav-link">Activities</a>
+        <a href="#stats" class="nav-link">Stats</a>
+        <a href="#contact" class="nav-link">Contact</a>
+
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon sun">☀</span>
+          <span class="theme-icon moon">🌙</span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
   <!-- ===== Hero Section ===== -->
   <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <img src="profile.jpg" alt="Neeraj Singh" class="profile-photo">
-      <div class="hero-text">
-        <h1>Neeraj Singh</h1>
-        <p>Android Developer • Kotlin • Java</p>
-        <p>Turning ideas into intuitive, high-performance apps</p>
+      <div class="hero-left">
+        <img src="profile.jpg" alt="Neeraj Singh" class="profile-photo">
+
+        <div class="hero-social">
+          <a href="mailto:nsingh0399@gmail.com" aria-label="Email">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail">
+          </a>
+          <a href="https://linkedin.com/in/neeraj-singh-b8b469280" target="_blank" aria-label="LinkedIn">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <p class="hero-tag">Android Developer • Kotlin • Java</p>
+        <h1>Hi, I'm <span>Neeraj Singh</span></h1>
+        <p class="hero-typed">
+          <span id="typed-text"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-desc">
+          I build fast, modern Android apps using Kotlin and Jetpack Compose with clean architecture,
+          intuitive UI, and production-ready Firebase integration.
+        </p>
+
         <div class="hero-buttons">
-          <a href="#projects">View Projects</a>
-          <a href="#contact">Contact Me</a>
-          <a href="a4ac54c3-04e1-4bcb-88b7-1ecad0146a98.pdf" download>Download Resume</a>
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+          <a href="a4ac54c3-04e1-4bcb-88b7-1ecad0146a98.pdf" download class="btn btn-ghost">
+            Download Resume
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="label">Location</span>
+            <span class="value">Kurukshetra, India</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="label">Availability</span>
+            <span class="value">Open to SDE / Android Intern roles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down">
+      Scroll Down
+      <span class="scroll-icon">↓</span>
+    </a>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about" class="fade-section">
+    <h2>Career Objective</h2>
+    <div class="section-content grid-2">
+      <p>
+        To begin my career in a dynamic and growth-oriented organization where I can apply my knowledge,
+        learn from experts, and contribute to organizational success. Leveraging my expertise in Android
+        and Kotlin to build intuitive, high-performance applications that deliver exceptional user experiences.
+      </p>
+      <div class="about-card">
+        <h3>What I Focus On</h3>
+        <ul>
+          <li>Clean, maintainable Kotlin code with MVVM / modern patterns.</li>
+          <li>Jetpack Compose-based UI with smooth UX and animations.</li>
+          <li>Firebase-backed apps with secure authentication & realtime data.</li>
+          <li>Optimizing performance, networking, and offline-first experiences.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Skills Section ===== -->
+  <section id="skills" class="fade-section">
+    <h2>Skills</h2>
+
+    <h3>Main Expertise</h3>
+    <ul class="skill-list">
+      <li>Kotlin</li>
+      <li>Jetpack Compose</li>
+      <li>Android App Development</li>
+    </ul>
+
+    <h3>Additional Skills</h3>
+    <ul class="skill-list">
+      <li>Java</li>
+      <li>C</li>
+      <li>C++</li>
+      <li>Data Structures & Algorithms (DSA)</li>
+      <li>Unix / Linux</li>
+      <li>Database Management Systems (DBMS)</li>
+      <li>Python</li>
+      <li>HTML</li>
+    </ul>
+  </section>
+
+  <!-- ===== Tech Stack Section ===== -->
+  <section id="techstack" class="fade-section">
+    <h2>Tech Stack</h2>
+    <p class="section-subtitle">Tools & technologies I use to build Android apps.</p>
+    <div class="tech-icons">
+      <div class="tech-chip">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin">
+        <span>Kotlin</span>
+      </div>
+      <div class="tech-chip">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+        <span>Java</span>
+      </div>
+      <div class="tech-chip">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android">
+        <span>Android</span>
+      </div>
+      <div class="tech-chip">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+        <span>Firebase</span>
+      </div>
+      <div class="tech-chip">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+        <span>Git & GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+  <section id="projects" class="fade-section">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <article class="project-item">
+        <div class="project-header">
+          <h3 class="project-title">Loan Drive (Android App)</h3>
+          <span class="project-tag">Production-ready • Kotlin • Compose</span>
+        </div>
+        <p class="project-short">
+          A Kotlin and Jetpack Compose-based Android application that helps users calculate vehicle
+          affordability using proven financial rules, integrated with Firebase Authentication.
+        </p>
+        <ul class="project-features">
+          <li><strong>Google Login:</strong> Secure sign-in with Firebase Authentication.</li>
+          <li><strong>Car Calculator:</strong> Uses the "20-4-10" rule to calculate income, EMI, and loan duration.</li>
+          <li><strong>Bike Calculator:</strong> Tailored two-wheeler affordability with flexible parameters.</li>
+          <li>Responsive, modern UI with Jetpack Compose and animated cards.</li>
+        </ul>
+        <div class="project-meta">
+          <span class="meta-label">Tech:</span>
+          <span class="meta-value">Kotlin, Jetpack Compose, Firebase, Material 3</span>
+        </div>
+        <div class="project-links">
+          <a href="7304f7bd-60c1-44d8-9b72-5cdb7707a530.apk" download class="btn btn-primary-sm">Download APK</a>
+          <!-- You can add GitHub link when ready -->
+          <!-- <a href="#" class="btn btn-outline-sm">View Code</a> -->
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-item">
+        <div class="project-header">
+          <h3 class="project-title">CampusDrive (Android App, Under Development)</h3>
+          <span class="project-tag project-tag-soon">In Progress • Kotlin • Compose</span>
+        </div>
+        <p class="project-short">
+          An upcoming Android app designed for college students to quickly download PYQs, notes,
+          and other resources, with an admin panel for fast content updates.
+        </p>
+        <ul class="project-features">
+          <li>Category-based material navigation for different semesters and subjects.</li>
+          <li>Fast PDF downloads with clear file organization.</li>
+          <li>Admin panel for content upload and management.</li>
+          <li>Planned features: offline mode, push notifications, search, and bookmarking.</li>
+        </ul>
+        <div class="project-meta">
+          <span class="meta-label">Tech:</span>
+          <span class="meta-value">Kotlin, Jetpack Compose, Firebase Storage (planned)</span>
+        </div>
+        <div class="project-links">
+          <span class="badge-coming-soon">Coming Soon</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== Education Section ===== -->
+  <section id="education" class="fade-section">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>B.Tech in Computer Science & Engineering</h3>
+          <p class="timeline-meta">UIET, Kurukshetra University &middot; 2022 - 2026</p>
+          <p>
+            Coursework includes Data Structures & Algorithms, Operating Systems, DBMS, Computer Networks,
+            and Mobile Application Development.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== About Section ===== -->
-  <section id="about">
-    <h2>Career Objective</h2>
-    <p>
-      To begin my career in a dynamic and growth-oriented organization where I can apply my knowledge, learn from experts, and contribute
-      to organizational success. Leveraging my expertise in Android and Kotlin to build intuitive, high-performance applications that deliver
-      exceptional user experiences.
-    </p>
-  </section>
-
-<!-- Skills Section -->
-<section id="skills">
-  <h2>Skills</h2>
-
-  <h3>Main Expertise</h3>
-  <ul class="skill-list">
-    <li>Kotlin</li>
-    <li>Jetpack Compose</li>
-    <li>Android App Development</li>
-  </ul>
-
-  <h3>Additional Skills</h3>
-  <ul class="skill-list">
-    <li>Java</li>
-    <li>C</li>
-    <li>C++</li>
-    <li>Data Structures & Algorithms (DSA)</li>
-    <li>Unix / Linux</li>
-    <li>Database Management Systems (DBMS)</li>
-    <li>Python</li>
-    <li>HTML</li>
-  </ul>
-</section>
-
-  <!-- ===== Tech Stack Section ===== -->
-  <section id="techstack">
-    <h2>Tech Stack</h2>
-    <div class="tech-icons">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-    </div>
-  </section>
-
-  <!-- ===== Projects Section ===== -->
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <!-- Project 1 -->
-    <div class="project-item">
-      <div class="project-title">Loan Drive (Android App)</div>
-      <div class="project-description">
-        A Kotlin and Jetpack Compose-based Android application that helps users calculate vehicle affordability using proven financial rules. Integrated with Google Firebase for secure authentication.
-        <ul>
-          <li><strong>Google Login:</strong> Secure sign-in with Firebase Authentication.</li>
-          <li><strong>Car Calculator:</strong> Based on the "20-4-10" rule — calculates income, EMI, loan duration.</li>
-          <li><strong>Bike Calculator:</strong> Similar features for two-wheelers.</li>
-          <li>Clean, modern UI with Jetpack Compose.</li>
-        </ul>
-      </div>
-      <div class="project-links">
-        <a href="7304f7bd-60c1-44d8-9b72-5cdb7707a530.apk" download>Download APK</a>
-      </div>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project-item">
-      <div class="project-title">CampusDrive (Android App, Under Development)</div>
-      <div class="project-description">
-        An upcoming Android app designed for college students to quickly download PYQs, notes, and other resources. Built with Kotlin and Jetpack Compose.
-        <ul>
-          <li>Category-based material navigation.</li>
-          <li>Fast PDF downloads.</li>
-          <li>Admin panel for content updates.</li>
-          <li>Planned: Offline mode, push notifications.</li>
-        </ul>
-      </div>
-      <div class="project-links">
-        <span>Coming Soon</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Education Section ===== -->
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li>B.Tech, CSE (2022 - 2026)  
-      UIET, Kurukshetra University</li>
-    </ul>
-  </section>
-
   <!-- ===== Certifications Section ===== -->
-  <section id="certifications">
+  <section id="certifications" class="fade-section">
     <h2>Certifications</h2>
-    <div class="certification-list">
-      <div class="cert-card">
+    <div class="card-grid">
+      <article class="cert-card">
         <h3>Android App Development</h3>
-        <p><strong>Internshala</strong> | Jul 2024 - Sep 2024</p>
-        <p>8-week training on Kotlin, Jetpack Compose, Firebase. Score: 63%</p>
-      </div>
-      <div class="cert-card">
+        <p><strong>Internshala</strong> &middot; Jul 2024 - Sep 2024</p>
+        <p>8-week training on Kotlin, Jetpack Compose, and Firebase.</p>
+        <p><strong>Score:</strong> 63%</p>
+      </article>
+
+      <article class="cert-card">
         <h3>Core Java</h3>
-        <p><strong>Internshala</strong> | Jul 2023 - Aug 2023</p>
-        <p>6-week training in Java fundamentals, OOP, app development. Score: 88%</p>
-      </div>
+        <p><strong>Internshala</strong> &middot; Jul 2023 - Aug 2023</p>
+        <p>6-week training in Java fundamentals, OOP, and application development.</p>
+        <p><strong>Score:</strong> 88%</p>
+      </article>
     </div>
   </section>
 
   <!-- ===== Extracurricular Activities ===== -->
-  <section id="activities">
+  <section id="activities" class="fade-section">
     <h2>Extracurricular Activities</h2>
-    <div class="activity-list">
-      <div class="activity-card">
+    <div class="card-grid">
+      <article class="activity-card">
         <h3>Deloitte Australia Technology Job Simulation</h3>
-        <p><strong>Platform:</strong> Forage | <strong>Date:</strong> July 2025</p>
-        <p>Completed virtual simulation involving development tasks, proposals, and dashboard solutions.</p>
-      </div>
+        <p><strong>Platform:</strong> Forage &middot; <strong>Date:</strong> July 2025</p>
+        <p>
+          Completed a virtual simulation involving development tasks, proposing solutions, and designing
+          a technology dashboard, gaining exposure to real-world consulting workflows.
+        </p>
+      </article>
     </div>
   </section>
 
   <!-- ===== Stats Section ===== -->
-  <section id="stats">
+  <section id="stats" class="fade-section">
     <h2>My Stats</h2>
+    <p class="section-subtitle">A quick snapshot of my journey so far.</p>
     <div class="stats-grid">
       <div class="stat-card">
-        <h3>5+</h3>
+        <h3 class="stat-number" data-target="5">0</h3>
         <p>Projects Completed</p>
       </div>
       <div class="stat-card">
-        <h3>200+</h3>
+        <h3 class="stat-number" data-target="200">0</h3>
         <p>Hours of Coding</p>
       </div>
       <div class="stat-card">
-        <h3>2</h3>
+        <h3 class="stat-number" data-target="2">0</h3>
         <p>Certifications Earned</p>
       </div>
     </div>
   </section>
 
   <!-- ===== Contact Section ===== -->
-  <section id="contact">
+  <section id="contact" class="fade-section">
     <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <div class="contact-icons">
-      <a href="mailto:nsingh0399@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail"></a>
-      <a href="https://linkedin.com/in/yourprofile"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
-      <a href="https://github.com/yourprofile"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub"></a>
+    <p class="section-subtitle">
+      Have an opportunity, internship, or collaboration in mind? Let’s talk.
+    </p>
+    <div class="contact-wrapper">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input id="name" type="text" name="name" placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input id="email" type="email" name="_replyto" placeholder="Enter your email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project or query" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-status" id="form-status"></p>
+      </form>
+
+      <div class="contact-side">
+        <h3>Other ways to reach me</h3>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:nsingh0399@gmail.com">nsingh0399@gmail.com</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/neeraj-singh-b8b469280" target="_blank">neeraj-singh-b8b469280</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a></li>
+        </ul>
+        <div class="contact-icons">
+          <a href="mailto:nsingh0399@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail"></a>
+          <a href="https://linkedin.com/in/neeraj-singh-b8b469280" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+          <a href="https://github.com/yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub"></a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ===== Footer ===== -->
   <footer>
-    <p>&copy; 2025 Neeraj Singh</p>
+    <p>&copy; 2025 Neeraj Singh • Android Developer</p>
     <div class="footer-social">
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png"></a>
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"></a>
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+      <a href="https://github.com/yourprofile" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/neeraj-singh-b8b469280" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+      </a>
+      <a href="mailto:nsingh0399@gmail.com">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+      </a>
     </div>
   </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scroll-top" aria-label="Scroll to top">↑</button>
 
   <script src="script.js"></script>
 </body>
