@@ -78,7 +78,8 @@
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">View Projects</a>
           <a href="#contact" class="btn btn-outline">Contact Me</a>
-          <a href="a4ac54c3-04e1-4bcb-88b7-1ecad0146a98.pdf" download class="btn btn-ghost">
+          <!-- ✅ UPDATED RESUME LINK HERE -->
+          <a href="Neeraj_Singh_Resume.pdf" download="Neeraj_Singh_Resume.pdf" class="btn btn-ghost">
             Download Resume
           </a>
         </div>
@@ -123,28 +124,65 @@
   </section>
 
   <!-- ===== Skills Section ===== -->
-  <section id="skills" class="fade-section">
-    <h2>Skills</h2>
+<section id="skills" class="fade-section">
+  <h2>Skills</h2>
 
-    <h3>Main Expertise</h3>
-    <ul class="skill-list">
-      <li>Kotlin</li>
-      <li>Jetpack Compose</li>
-      <li>Android App Development</li>
-    </ul>
+  <h3>Main Expertise</h3>
+  <ul class="skill-list">
+    <li class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin icon">
+      <span>Kotlin</span>
+    </li>
+    <li class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetpackcompose/jetpackcompose-plain.svg" alt="Jetpack Compose icon">
+      <span>Jetpack Compose</span>
+    </li>
+    <li class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android icon">
+      <span>Android App Development</span>
+    </li>
+    <li class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase icon">
+      <span>Firebase</span>
+    </li>
+  </ul>
 
-    <h3>Additional Skills</h3>
-    <ul class="skill-list">
-      <li>Java</li>
-      <li>C</li>
-      <li>C++</li>
-      <li>Data Structures & Algorithms (DSA)</li>
-      <li>Unix / Linux</li>
-      <li>Database Management Systems (DBMS)</li>
-      <li>Python</li>
-      <li>HTML</li>
-    </ul>
-  </section>
+  <h3>Additional Skills</h3>
+  <ul class="skill-list">
+    <li class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java icon">
+      <span>Java</span>
+    </li>
+    <li class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C icon">
+      <span>C</span>
+    </li>
+    <li class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ icon">
+      <span>C++</span>
+    </li>
+    <li class="skill-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" alt="DSA icon">
+      <span>Data Structures & Algorithms (DSA)</span>
+    </li>
+    <li class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux icon">
+      <span>Unix / Linux</span>
+    </li>
+    <li class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="DBMS icon">
+      <span>Database Management Systems (DBMS)</span>
+    </li>
+    <li class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python icon">
+      <span>Python</span>
+    </li>
+    <li class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML icon">
+      <span>HTML</span>
+    </li>
+  </ul>
+</section>
 
   <!-- ===== Tech Stack Section ===== -->
   <section id="techstack" class="fade-section">
@@ -174,119 +212,229 @@
     </div>
   </section>
 
-  <!-- ===== Projects Section ===== -->
-  <section id="projects" class="fade-section">
-    <h2>Projects</h2>
+<!-- ===== Projects Section ===== -->
+<section id="projects" class="fade-section">
+  <h2>Projects</h2>
 
-    <div class="projects-grid">
+  <div class="projects-grid">
 
-      <!-- Project 1 -->
-      <article class="project-item">
-        <div class="project-header">
-          <h3 class="project-title">Loan Drive (Android App)</h3>
-          <span class="project-tag">Production-ready • Kotlin • Compose</span>
-        </div>
-        <p class="project-short">
-          A Kotlin and Jetpack Compose-based Android application that helps users calculate vehicle
-          affordability using proven financial rules, integrated with Firebase Authentication.
+    <!-- Project 1: Nearby Service -->
+    <article class="project-item">
+      <div class="project-header">
+        <h3 class="project-title">Nearby Service (Android App)</h3>
+        <span class="project-tag">Live • Kotlin • Services Finder</span>
+      </div>
+      <p class="project-short">
+        An Android app that helps users discover nearby services (like salons, electricians, mechanics, etc.)
+        with a clean UI, category-based browsing, and quick contact options.
+      </p>
+      <ul class="project-features">
+        <li><strong>Service Discovery:</strong> Browse local services by category and distance.</li>
+        <li><strong>User-Friendly UI:</strong> Jetpack Compose interface with modern cards and filters.</li>
+        <li><strong>Quick Actions:</strong> Call / WhatsApp directly from the app to contact the provider.</li>
+        <li>Designed to be lightweight and responsive, suitable for low-end devices as well.</li>
+      </ul>
+      <div class="project-meta">
+        <span class="meta-label">Tech:</span>
+        <span class="meta-value">Kotlin, Jetpack Compose, (Future: Maps / REST APIs)</span>
+      </div>
+      <div class="project-links project-buttons">
+        <button class="btn btn-outline-sm preview-btn" onclick="openPreview('nearby')">
+          Preview App
+        </button>
+        <a href="nearby-service.apk" download class="btn btn-primary-sm">
+          Download APK
+        </a>
+      </div>
+    </article>
+
+    <!-- Project 2: Loan Drive -->
+    <article class="project-item">
+      <div class="project-header">
+        <h3 class="project-title">Loan Drive (Android App)</h3>
+        <span class="project-tag">Production-ready • Kotlin • Finance</span>
+      </div>
+      <p class="project-short">
+        A vehicle affordability calculator app that helps users understand how much car or bike they can afford
+        using practical financial rules, with clean UI and Firebase authentication.
+      </p>
+      <ul class="project-features">
+        <li><strong>Google Login:</strong> Secure authentication using Firebase Authentication.</li>
+        <li><strong>Car Calculator:</strong> Uses the "20-4-10" rule to estimate income, EMI, and loan duration.</li>
+        <li><strong>Bike Calculator:</strong> Similar logic customized for two-wheelers with flexible inputs.</li>
+        <li>UI built fully in Jetpack Compose with responsive layouts and card-based design.</li>
+      </ul>
+      <div class="project-meta">
+        <span class="meta-label">Tech:</span>
+        <span class="meta-value">Kotlin, Jetpack Compose, Firebase Auth, Material 3</span>
+      </div>
+      <div class="project-links project-buttons">
+        <button class="btn btn-outline-sm preview-btn" onclick="openPreview('loan')">
+          Preview App
+        </button>
+        <a href="loan-drive.apk" download class="btn btn-primary-sm">
+          Download APK
+        </a>
+      </div>
+    </article>
+
+    <!-- Project 3: Smart Expense Tracker -->
+    <article class="project-item">
+      <div class="project-header">
+        <h3 class="project-title">Smart Expense Tracker (Android App)</h3>
+        <span class="project-tag">Finance • Kotlin • Firebase</span>
+      </div>
+      <p class="project-short">
+        An Android application to help users track monthly expenses, analyze spending patterns,
+        and view category-wise breakdowns with charts and visualizations.
+      </p>
+      <ul class="project-features">
+        <li><strong>Expense Management:</strong> Add, edit, and delete expenses with category tags and notes.</li>
+        <li><strong>Charts & Insights:</strong> Visual representation of spending (by category, month etc.).</li>
+        <li><strong>Cloud Sync:</strong> Firebase-backed user data for easy access across devices.</li>
+        <li>Modern Compose UI with smooth layouts and focus on usability and clarity.</li>
+      </ul>
+      <div class="project-meta">
+        <span class="meta-label">Tech:</span>
+        <span class="meta-value">Kotlin, Jetpack Compose, Firebase, (Optional: MPAndroidChart)</span>
+      </div>
+      <div class="project-links project-buttons">
+        <button class="btn btn-outline-sm preview-btn" onclick="openPreview('expense')">
+          Preview App
+        </button>
+        <a href="smart-expense.apk" download class="btn btn-primary-sm">
+          Download APK
+        </a>
+      </div>
+    </article>
+
+    <!-- Project 4: CampusDrive -->
+    <article class="project-item">
+      <div class="project-header">
+        <h3 class="project-title">CampusDrive (Android App, Under Development)</h3>
+        <span class="project-tag project-tag-soon">In Progress • Kotlin • College Utility</span>
+      </div>
+      <p class="project-short">
+        A resource hub for college students to quickly access PYQs, notes, and other study materials,
+        organized by semester and subject with fast PDF downloads.
+      </p>
+      <ul class="project-features">
+        <li><strong>Organized Content:</strong> Subject & semester-wise study material browsing.</li>
+        <li><strong>Fast Access:</strong> Simple UI for quick PDF downloads.</li>
+        <li><strong>Admin Panel (Planned):</strong> Easy upload & management of content.</li>
+        <li>Future features: offline mode, push notifications, search and bookmarking.</li>
+      </ul>
+      <div class="project-meta">
+        <span class="meta-label">Tech:</span>
+        <span class="meta-value">Kotlin, Jetpack Compose, (Planned: Firebase Storage, Cloud Functions)</span>
+      </div>
+      <div class="project-links project-buttons">
+        <button class="btn btn-outline-sm preview-btn" onclick="openPreview('campus')">
+          Preview App
+        </button>
+        <span class="badge-coming-soon">Coming Soon</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== Education Section ===== -->
+<section id="education" class="fade-section">
+  <h2>Education</h2>
+
+  <div class="timeline">
+
+    <!-- B.Tech -->
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>B.Tech in Computer Science & Engineering</h3>
+        <p class="timeline-meta">UIET, Kurukshetra University · 2022 – 2026</p>
+        <p>
+          Coursework includes Data Structures & Algorithms, Operating Systems, DBMS,
+          Computer Networks, and Mobile Application Development.
         </p>
-        <ul class="project-features">
-          <li><strong>Google Login:</strong> Secure sign-in with Firebase Authentication.</li>
-          <li><strong>Car Calculator:</strong> Uses the "20-4-10" rule to calculate income, EMI, and loan duration.</li>
-          <li><strong>Bike Calculator:</strong> Tailored two-wheeler affordability with flexible parameters.</li>
-          <li>Responsive, modern UI with Jetpack Compose and animated cards.</li>
-        </ul>
-        <div class="project-meta">
-          <span class="meta-label">Tech:</span>
-          <span class="meta-value">Kotlin, Jetpack Compose, Firebase, Material 3</span>
-        </div>
-        <div class="project-links">
-          <a href="7304f7bd-60c1-44d8-9b72-5cdb7707a530.apk" download class="btn btn-primary-sm">Download APK</a>
-          <!-- You can add GitHub link when ready -->
-          <!-- <a href="#" class="btn btn-outline-sm">View Code</a> -->
-        </div>
-      </article>
-
-      <!-- Project 2 -->
-      <article class="project-item">
-        <div class="project-header">
-          <h3 class="project-title">CampusDrive (Android App, Under Development)</h3>
-          <span class="project-tag project-tag-soon">In Progress • Kotlin • Compose</span>
-        </div>
-        <p class="project-short">
-          An upcoming Android app designed for college students to quickly download PYQs, notes,
-          and other resources, with an admin panel for fast content updates.
-        </p>
-        <ul class="project-features">
-          <li>Category-based material navigation for different semesters and subjects.</li>
-          <li>Fast PDF downloads with clear file organization.</li>
-          <li>Admin panel for content upload and management.</li>
-          <li>Planned features: offline mode, push notifications, search, and bookmarking.</li>
-        </ul>
-        <div class="project-meta">
-          <span class="meta-label">Tech:</span>
-          <span class="meta-value">Kotlin, Jetpack Compose, Firebase Storage (planned)</span>
-        </div>
-        <div class="project-links">
-          <span class="badge-coming-soon">Coming Soon</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ===== Education Section ===== -->
-  <section id="education" class="fade-section">
-    <h2>Education</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>B.Tech in Computer Science & Engineering</h3>
-          <p class="timeline-meta">UIET, Kurukshetra University &middot; 2022 - 2026</p>
-          <p>
-            Coursework includes Data Structures & Algorithms, Operating Systems, DBMS, Computer Networks,
-            and Mobile Application Development.
-          </p>
-        </div>
       </div>
     </div>
-  </section>
 
-  <!-- ===== Certifications Section ===== -->
-  <section id="certifications" class="fade-section">
-    <h2>Certifications</h2>
-    <div class="card-grid">
-      <article class="cert-card">
-        <h3>Android App Development</h3>
-        <p><strong>Internshala</strong> &middot; Jul 2024 - Sep 2024</p>
-        <p>8-week training on Kotlin, Jetpack Compose, and Firebase.</p>
-        <p><strong>Score:</strong> 63%</p>
-      </article>
-
-      <article class="cert-card">
-        <h3>Core Java</h3>
-        <p><strong>Internshala</strong> &middot; Jul 2023 - Aug 2023</p>
-        <p>6-week training in Java fundamentals, OOP, and application development.</p>
-        <p><strong>Score:</strong> 88%</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- ===== Extracurricular Activities ===== -->
-  <section id="activities" class="fade-section">
-    <h2>Extracurricular Activities</h2>
-    <div class="card-grid">
-      <article class="activity-card">
-        <h3>Deloitte Australia Technology Job Simulation</h3>
-        <p><strong>Platform:</strong> Forage &middot; <strong>Date:</strong> July 2025</p>
+    <!-- Class 12 -->
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Senior Secondary (Class 12)</h3>
+        <p class="timeline-meta">Kendriya Vidyalaya No. 1, Faridabad · CBSE · 2022</p>
         <p>
-          Completed a virtual simulation involving development tasks, proposing solutions, and designing
-          a technology dashboard, gaining exposure to real-world consulting workflows.
+          Specialized in PCM (Physics, Chemistry, Mathematics) with Computer Science foundation.
         </p>
-      </article>
+      </div>
     </div>
-  </section>
+
+    <!-- Class 10 -->
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Secondary (Class 10)</h3>
+        <p class="timeline-meta">Kendriya Vidyalaya No. 1, Faridabad · CBSE · 2020</p>
+        <p>
+          Cleared foundational academics with strong interest in technology & computers.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Certifications Section ===== -->
+<section id="certifications" class="fade-section">
+  <h2>Certifications</h2>
+
+  <div class="certification-grid">
+
+    <!-- Certificate 1 -->
+    <div class="cert-card" onclick="openCertificate('Android App Development with AI Training - Certificate of Completion.pdf')">
+      <h3>Android App Development with AI</h3>
+      <p><strong>Platform:</strong> Internshala</p>
+      <p><strong>Completion Date:</strong> 01 Sept 2024</p>
+      <p>Covered Kotlin + Jetpack Compose + Firebase + AI modules.</p>
+      <button class="view-btn">View Certificate</button>
+    </div>
+
+    <!-- Certificate 2 -->
+    <div class="cert-card" onclick="openCertificate('Core Java Training - Certificate of Completion.pdf')">
+      <h3>Core Java Training</h3>
+      <p><strong>Platform:</strong> Internshala</p>
+      <p><strong>Completion Date:</strong> 09 Aug 2023</p>
+      <p>6-week Java course, Scored 88%.</p>
+      <button class="view-btn">View Certificate</button>
+    </div>
+
+    <!-- Certificate 3 -->
+    <div class="cert-card" onclick="openCertificate('certificate_TD-NEER-DP-1130.pdf')">
+      <h3>DSA with Python</h3>
+      <p><strong>Platform:</strong> TuteDude</p>
+      <p><strong>Completion Date:</strong> 01 Sept 2025</p>
+      <p>Completed DSA + Problem Solving Course.</p>
+      <button class="view-btn">View Certificate</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Extracurricular Activities ===== -->
+<section id="activities" class="fade-section">
+  <h2>Extracurricular Activities</h2>
+
+  <div class="activity-grid">
+    <div class="activity-card" onclick="openCertificate('delloite certificate.pdf')">
+      <h3>Deloitte Technology Job Simulation</h3>
+      <p><strong>Platform:</strong> Forage</p>
+      <p><strong>Date:</strong> July 2025</p>
+      <p>Hands-on simulation experience in coding & development process.</p>
+      <button class="view-btn">View Certificate</button>
+    </div>
+  </div>
+</section>
 
   <!-- ===== Stats Section ===== -->
   <section id="stats" class="fade-section">
@@ -294,7 +442,7 @@
     <p class="section-subtitle">A quick snapshot of my journey so far.</p>
     <div class="stats-grid">
       <div class="stat-card">
-        <h3 class="stat-number" data-target="5">0</h3>
+        <h3 class="stat-number" data-target="3">0</h3>
         <p>Projects Completed</p>
       </div>
       <div class="stat-card">
@@ -302,7 +450,7 @@
         <p>Hours of Coding</p>
       </div>
       <div class="stat-card">
-        <h3 class="stat-number" data-target="2">0</h3>
+        <h3 class="stat-number" data-target="4">0</h3>
         <p>Certifications Earned</p>
       </div>
     </div>
@@ -368,5 +516,28 @@
   <button id="scroll-top" aria-label="Scroll to top">↑</button>
 
   <script src="script.js"></script>
+
+  <!-- ================= Certificate Viewer Modal ================= -->
+<div id="certificateModal" class="certificate-modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeCertificate()">&times;</span>
+    <embed id="certificateFrame" type="application/pdf" width="100%" height="100%">
+  </div>
+</div>
+
+<!-- ========== APP SCREEN PREVIEW MODAL ========== -->
+<div id="appPreviewModal" class="preview-modal">
+  <span class="closePreview" onclick="closePreview()">✕</span>
+
+  <div class="preview-slider">
+    <img id="previewImage" src="" alt="App Preview">
+
+    <div class="preview-controls">
+      <button onclick="prevImage()">⟨</button>
+      <button onclick="nextImage()">⟩</button>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
