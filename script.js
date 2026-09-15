@@ -1,281 +1,900 @@
-// =======================
-// Smooth Scroll for Navbar
-// =======================
-document.querySelectorAll('nav a[href^="#"], .scroll-down').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    if (href && href.startsWith('#')) {
-      e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  });
-});
+/* =====================================================
+   NEERAJ SINGH PORTFOLIO
+===================================================== */
 
-// =======================
-// Highlight Active Nav Link
-// =======================
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
 
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 120;
-    if (window.scrollY >= sectionTop) {
-      current = section.getAttribute('id');
-    }
-  });
+/* =====================================================
+   AOS
+===================================================== */
 
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
-  });
-});
+if (typeof AOS !== "undefined") {
 
-// =======================
-// Fade-in Animation on Scroll
-// =======================
-const fadeElements = document.querySelectorAll('.fade-section');
+    AOS.init({
 
-const appearOnScroll = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      appearOnScroll.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
+        duration: 650,
 
-fadeElements.forEach(el => {
-  appearOnScroll.observe(el);
-});
+        easing: "ease-out-cubic",
 
-// =======================
-// Mobile Nav Toggle
-// =======================
-const navToggle = document.getElementById('nav-toggle');
-const navMenu = document.getElementById('nav-menu');
+        once: true,
 
-if (navToggle && navMenu) {
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-  });
+        offset: 60
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
     });
-  });
+
 }
 
-// =======================
-// Theme Toggle (Light / Dark) with localStorage
-// =======================
-const themeToggle = document.getElementById('theme-toggle');
-const htmlEl = document.documentElement;
+
+/* =====================================================
+   DARK MODE
+   DARK IS DEFAULT
+===================================================== */
+
+const html =
+    document.documentElement;
+
+const themeToggle =
+    document.getElementById(
+        "theme-toggle"
+    );
+
 
 function setTheme(theme) {
-  htmlEl.setAttribute('data-theme', theme);
-  localStorage.setItem('portfolio-theme', theme);
+
+    if (theme === "dark") {
+
+        html.classList.add("dark");
+
+        if (themeToggle) {
+
+            themeToggle.innerHTML =
+                '<i class="fa-solid fa-sun"></i>';
+
+            themeToggle.setAttribute(
+                "aria-label",
+                "Switch to light mode"
+            );
+
+        }
+
+    } else {
+
+        html.classList.remove("dark");
+
+        if (themeToggle) {
+
+            themeToggle.innerHTML =
+                '<i class="fa-solid fa-moon"></i>';
+
+            themeToggle.setAttribute(
+                "aria-label",
+                "Switch to dark mode"
+            );
+
+        }
+
+    }
+
+    localStorage.setItem(
+        "portfolio-theme",
+        theme
+    );
+
 }
 
-function initTheme() {
-  const storedTheme = localStorage.getItem('portfolio-theme');
-  if (storedTheme) {
-    setTheme(storedTheme);
-  } else {
-    // default light
-    setTheme('light');
-  }
+
+/*
+   Important:
+   Dark mode is deliberately the
+   default for first-time visitors.
+*/
+
+const savedTheme =
+    localStorage.getItem(
+        "portfolio-theme"
+    );
+
+if (savedTheme) {
+
+    setTheme(savedTheme);
+
+} else {
+
+    setTheme("dark");
+
 }
 
-initTheme();
 
 if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    const currentTheme = htmlEl.getAttribute('data-theme');
-    setTheme(currentTheme === 'light' ? 'dark' : 'light');
-  });
+
+    themeToggle.addEventListener(
+        "click",
+        () => {
+
+            const isDark =
+                html.classList.contains("dark");
+
+            setTheme(
+                isDark
+                    ? "light"
+                    : "dark"
+            );
+
+        }
+    );
+
 }
 
-// =======================
-// Typing Effect in Hero
-// =======================
-const typedTextEl = document.getElementById('typed-text');
+
+/* =====================================================
+   MOBILE NAV
+===================================================== */
+
+const navToggle =
+    document.getElementById(
+        "nav-toggle"
+    );
+
+const navMenu =
+    document.getElementById(
+        "nav-menu"
+    );
+
+
+if (navToggle && navMenu) {
+
+    navToggle.addEventListener(
+        "click",
+        () => {
+
+            navMenu.classList.toggle(
+                "open"
+            );
+
+        }
+    );
+
+}
+
+
+document.querySelectorAll(
+    ".nav-link"
+).forEach(link => {
+
+    link.addEventListener(
+        "click",
+        () => {
+
+            navMenu?.classList.remove(
+                "open"
+            );
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   SMOOTH SCROLL
+===================================================== */
+
+document.querySelectorAll(
+    'a[href^="#"]'
+).forEach(anchor => {
+
+    anchor.addEventListener(
+        "click",
+        function (event) {
+
+            const href =
+                this.getAttribute("href");
+
+            if (
+                !href ||
+                href === "#"
+            ) {
+                return;
+            }
+
+            const target =
+                document.querySelector(
+                    href
+                );
+
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+
+            const navbarHeight =
+                70;
+
+            const position =
+                target.getBoundingClientRect().top +
+                window.scrollY -
+                navbarHeight;
+
+            window.scrollTo({
+
+                top: position,
+
+                behavior: "smooth"
+
+            });
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   ACTIVE NAV
+===================================================== */
+
+const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
+
+const navLinks =
+    document.querySelectorAll(
+        ".nav-link"
+    );
+
+
+function updateActiveNav() {
+
+    const currentPosition =
+        window.scrollY + 130;
+
+
+    sections.forEach(section => {
+
+        const top =
+            section.offsetTop;
+
+        const bottom =
+            top +
+            section.offsetHeight;
+
+        const id =
+            section.id;
+
+
+        if (
+            currentPosition >= top &&
+            currentPosition < bottom
+        ) {
+
+            navLinks.forEach(link => {
+
+                link.classList.remove(
+                    "active"
+                );
+
+
+                if (
+                    link.getAttribute(
+                        "href"
+                    ) === `#${id}`
+                ) {
+
+                    link.classList.add(
+                        "active"
+                    );
+
+                }
+
+            });
+
+        }
+
+    });
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateActiveNav,
+    {
+        passive: true
+    }
+);
+
+updateActiveNav();
+
+
+/* =====================================================
+   TYPING EFFECT
+===================================================== */
+
+const typingElement =
+    document.getElementById(
+        "typing-text"
+    );
+
+
 const phrases = [
-  'Android Developer specializing in Kotlin & Jetpack Compose',
-  'Building intuitive, high-performance mobile apps',
-  'Passionate about clean architecture & great UX'
+
+    "Robotics & Embedded Systems Engineer",
+
+    "Robotics & AI (STEM) Trainer",
+
+    "Arduino • ESP • IoT • Robotics",
+
+    "Android Developer • Kotlin • Java",
+
+    "STEM Education Enthusiast"
+
 ];
 
-let currentPhraseIndex = 0;
-let currentCharIndex = 0;
-let isDeleting = false;
-let typingDelay = 120;
-let pauseDelay = 1300;
 
-function type() {
-  if (!typedTextEl) return;
+let phraseIndex = 0;
 
-  const currentPhrase = phrases[currentPhraseIndex];
+let charIndex = 0;
 
-  if (!isDeleting) {
-    typedTextEl.textContent = currentPhrase.slice(0, currentCharIndex + 1);
-    currentCharIndex++;
+let deleting = false;
 
-    if (currentCharIndex === currentPhrase.length) {
-      isDeleting = true;
-      setTimeout(type, pauseDelay);
-      return;
+
+function typeText() {
+
+    if (!typingElement) {
+        return;
     }
-  } else {
-    typedTextEl.textContent = currentPhrase.slice(0, currentCharIndex - 1);
-    currentCharIndex--;
 
-    if (currentCharIndex === 0) {
-      isDeleting = false;
-      currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-    }
-  }
 
-  const delay = isDeleting ? typingDelay / 2 : typingDelay;
-  setTimeout(type, delay);
-}
+    const phrase =
+        phrases[phraseIndex];
 
-type();
 
-// =======================
-// Stats Counter Animation
-// =======================
-const statNumbers = document.querySelectorAll('.stat-number');
+    if (!deleting) {
 
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      const target = parseInt(el.getAttribute('data-target'), 10);
-      let current = 0;
-      const duration = 1500;
-      const startTime = performance.now();
+        charIndex++;
 
-      function updateCounter(now) {
-        const progress = Math.min((now - startTime) / duration, 1);
-        current = Math.floor(progress * target);
-        el.textContent = current + (target > 50 ? '+' : '');
-        if (progress < 1) {
-          requestAnimationFrame(updateCounter);
-        } else {
-          el.textContent = target + (target > 50 ? '+' : '');
+        typingElement.textContent =
+            phrase.substring(
+                0,
+                charIndex
+            );
+
+
+        if (
+            charIndex >=
+            phrase.length
+        ) {
+
+            deleting = true;
+
+            setTimeout(
+                typeText,
+                1600
+            );
+
+            return;
+
         }
-      }
 
-      requestAnimationFrame(updateCounter);
-      statsObserver.unobserve(el);
+    } else {
+
+        charIndex--;
+
+        typingElement.textContent =
+            phrase.substring(
+                0,
+                charIndex
+            );
+
+
+        if (charIndex <= 0) {
+
+            deleting = false;
+
+            phraseIndex =
+                (
+                    phraseIndex + 1
+                ) %
+                phrases.length;
+
+        }
+
     }
-  });
-}, { threshold: 0.3 });
 
-statNumbers.forEach(num => statsObserver.observe(num));
 
-// =======================
-// Scroll To Top Button
-// =======================
-const scrollTopBtn = document.getElementById('scroll-top');
+    setTimeout(
+        typeText,
+        deleting
+            ? 35
+            : 65
+    );
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 400) {
-    scrollTopBtn.classList.add('show');
-  } else {
-    scrollTopBtn.classList.remove('show');
-  }
+}
+
+
+setTimeout(
+    typeText,
+    500
+);
+
+
+/* =====================================================
+   PROJECT FILTER
+===================================================== */
+
+const filterButtons =
+    document.querySelectorAll(
+        ".filter-btn"
+    );
+
+const projectCards =
+    document.querySelectorAll(
+        ".project-card"
+    );
+
+
+filterButtons.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            filterButtons.forEach(
+                btn =>
+                    btn.classList.remove(
+                        "active"
+                    )
+            );
+
+            button.classList.add(
+                "active"
+            );
+
+
+            const filter =
+                button.dataset.filter;
+
+
+            projectCards.forEach(
+                card => {
+
+                    const category =
+                        card.dataset.category;
+
+
+                    if (
+                        filter === "all" ||
+                        category === filter
+                    ) {
+
+                        card.classList.remove(
+                            "hidden"
+                        );
+
+                    } else {
+
+                        card.classList.add(
+                            "hidden"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
 });
 
-scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
 
-// =======================
-// Contact Form Basic Validation & Feedback
-// =======================
-const contactForm = document.getElementById('contact-form');
-const formStatus = document.getElementById('form-status');
+/* =====================================================
+   COUNTERS
+===================================================== */
 
-if (contactForm && formStatus) {
-  contactForm.addEventListener('submit', (e) => {
-    const name = contactForm.name.value.trim();
-    const email = contactForm._replyto.value.trim();
-    const message = contactForm.message.value.trim();
+const counters =
+    document.querySelectorAll(
+        ".counter"
+    );
 
-    if (!name || !email || !message) {
-      e.preventDefault();
-      formStatus.textContent = 'Please fill in all fields.';
-      formStatus.style.color = '#ef4444';
-      return;
+let countersStarted =
+    false;
+
+
+function animateCounters() {
+
+    if (countersStarted) {
+        return;
     }
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      e.preventDefault();
-      formStatus.textContent = 'Please enter a valid email address.';
-      formStatus.style.color = '#ef4444';
-      return;
+    countersStarted = true;
+
+
+    counters.forEach(counter => {
+
+        const target =
+            Number(
+                counter.dataset.target
+            );
+
+        const duration =
+            1100;
+
+        const start =
+            performance.now();
+
+
+        function update(now) {
+
+            const progress =
+                Math.min(
+                    (now - start) /
+                    duration,
+                    1
+                );
+
+
+            const eased =
+                1 -
+                Math.pow(
+                    1 - progress,
+                    3
+                );
+
+
+            counter.textContent =
+                Math.floor(
+                    eased * target
+                );
+
+
+            if (progress < 1) {
+
+                requestAnimationFrame(
+                    update
+                );
+
+            } else {
+
+                counter.textContent =
+                    target;
+
+            }
+
+        }
+
+
+        requestAnimationFrame(
+            update
+        );
+
+    });
+
+}
+
+
+const statsSection =
+    document.querySelector(
+        ".stats-section"
+    );
+
+
+if (
+    statsSection &&
+    "IntersectionObserver" in window
+) {
+
+    const observer =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(
+                    entry => {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            animateCounters();
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: .3
+            }
+        );
+
+
+    observer.observe(
+        statsSection
+    );
+
+} else {
+
+    animateCounters();
+
+}
+
+
+/* =====================================================
+   SCROLL TO TOP
+===================================================== */
+
+const scrollTop =
+    document.getElementById(
+        "scroll-top"
+    );
+
+
+function updateScrollTop() {
+
+    if (!scrollTop) {
+        return;
     }
 
-    // Let Formspree handle submission; show success hint
-    formStatus.textContent = 'Sending message...';
-    formStatus.style.color = '#22c55e';
-  });
-}
-function openCertificate(pdfFile) {
-  document.getElementById("certificateFrame").src = pdfFile;
-  document.getElementById("certificateModal").style.display = "flex";
-}
 
-function closeCertificate() {
-  document.getElementById("certificateModal").style.display = "none";
-}
-// =======================
-// App Preview Images (JPG)
-// =======================
-let images = {
-  nearby: ["near1.jpg", "near2.jpg", "near3.jpg", "near4.jpg", "near5.jpg"],
-  loan: ["loan1.jpg", "loan2.jpg", "loan3.jpg", "loan4.jpg", "loan5.jpg"],
-  expense: ["expense1.jpg", "expense2.jpg", "expense3.jpg", "expense4.jpg", "expense5.jpg"],
-  campus: ["campus1.jpg", "campus2.jpg", "campus3.jpg", "campus4.jpg", "campus5.jpg"]
-};
+    if (
+        window.scrollY >
+        450
+    ) {
 
-let currentProject = "";
-let index = 0;
+        scrollTop.classList.add(
+            "show"
+        );
 
-function openPreview(project) {
-  currentProject = project;
-  index = 0;
-  const modal = document.getElementById("appPreviewModal");
-  const imgEl = document.getElementById("previewImage");
+    } else {
 
-  if (!images[project] || images[project].length === 0) return;
+        scrollTop.classList.remove(
+            "show"
+        );
 
-  imgEl.src = images[project][index];
-  modal.style.display = "flex";
+    }
+
 }
 
-function nextImage() {
-  if (!currentProject) return;
-  index = (index + 1) % images[currentProject].length;
-  document.getElementById("previewImage").src = images[currentProject][index];
+
+window.addEventListener(
+    "scroll",
+    updateScrollTop,
+    {
+        passive: true
+    }
+);
+
+
+if (scrollTop) {
+
+    scrollTop.addEventListener(
+        "click",
+        () => {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+    );
+
 }
 
-function prevImage() {
-  if (!currentProject) return;
-  index = (index - 1 + images[currentProject].length) % images[currentProject].length;
-  document.getElementById("previewImage").src = images[currentProject][index];
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+const contactForm =
+    document.getElementById(
+        "contact-form"
+    );
+
+const formMessage =
+    document.getElementById(
+        "form-message"
+    );
+
+
+if (contactForm) {
+
+    contactForm.addEventListener(
+        "submit",
+        event => {
+
+            const name =
+                document.getElementById(
+                    "name"
+                )?.value.trim();
+
+            const email =
+                document.getElementById(
+                    "email"
+                )?.value.trim();
+
+            const subject =
+                document.getElementById(
+                    "subject"
+                )?.value.trim();
+
+            const message =
+                document.getElementById(
+                    "message"
+                )?.value.trim();
+
+
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            if (
+                !name ||
+                !email ||
+                !subject ||
+                !message
+            ) {
+
+                event.preventDefault();
+
+                if (formMessage) {
+
+                    formMessage.textContent =
+                        "Please fill in all fields.";
+
+                    formMessage.style.color =
+                        "#ef4444";
+
+                }
+
+                return;
+
+            }
+
+
+            if (
+                !emailPattern.test(
+                    email
+                )
+            ) {
+
+                event.preventDefault();
+
+                if (formMessage) {
+
+                    formMessage.textContent =
+                        "Please enter a valid email.";
+
+                    formMessage.style.color =
+                        "#ef4444";
+
+                }
+
+                return;
+
+            }
+
+
+            if (formMessage) {
+
+                formMessage.textContent =
+                    "Sending message...";
+
+                formMessage.style.color =
+                    "#635bff";
+
+            }
+
+        }
+    );
+
 }
 
-function closePreview() {
-  document.getElementById("appPreviewModal").style.display = "none";
+
+/* =====================================================
+   NAVBAR SHADOW
+===================================================== */
+
+const navbar =
+    document.querySelector(
+        ".navbar"
+    );
+
+
+function updateNavbar() {
+
+    if (!navbar) {
+        return;
+    }
+
+
+    if (
+        window.scrollY > 20
+    ) {
+
+        navbar.style.boxShadow =
+            "0 8px 30px rgba(0,0,0,.10)";
+
+    } else {
+
+        navbar.style.boxShadow =
+            "none";
+
+    }
+
 }
+
+
+window.addEventListener(
+    "scroll",
+    updateNavbar,
+    {
+        passive: true
+    }
+);
+
+updateNavbar();
+
+
+/* =====================================================
+   ESCAPE KEY
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key ===
+            "Escape"
+        ) {
+
+            navMenu?.classList.remove(
+                "open"
+            );
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   CURRENT YEAR
+===================================================== */
+
+const currentYear =
+    document.getElementById(
+        "current-year"
+    );
+
+
+if (currentYear) {
+
+    currentYear.textContent =
+        new Date().getFullYear();
+
+}
+
+
+/* =====================================================
+   CONSOLE
+===================================================== */
+
+console.log(
+    "%c Neeraj Singh Portfolio ",
+    "background:#635bff;color:white;padding:7px 12px;border-radius:7px;font-weight:bold;"
+);
+
+console.log(
+    "Robotics • Embedded • IoT • AI • Android"
+);
