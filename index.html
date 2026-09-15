@@ -1,542 +1,2473 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neeraj Singh | Android Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Neeraj Singh | Robotics, Embedded Systems, IoT, AI, Android Developer and STEM Trainer"
+    >
+
+    <meta name="author" content="Neeraj Singh">
+
+    <title>Neeraj Singh | Robotics • Embedded • IoT • AI • Android</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Devicon -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- AOS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Browser Tab Icon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23635bff'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Arial,sans-serif' font-size='48' font-weight='800' fill='white'%3ENS%3C/text%3E%3C/svg%3E">
+
 </head>
+
+
 <body>
 
-  <!-- ===== Navigation ===== -->
-  <header class="header">
-    <nav class="navbar">
-      <div class="nav-left">
-        <a href="#hero" class="logo">
-          <span class="logo-mark">&lt;/&gt;</span>
-          <span class="logo-text">Neeraj<span>Singh</span></span>
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background-effects">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+</div>
+
+<div class="grid-bg"></div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            <span>&lt;</span>NS<span>/&gt;</span>
         </a>
-      </div>
 
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
+        <nav id="nav-menu">
 
-      <div class="nav-right" id="nav-menu">
-        <a href="#hero" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#techstack" class="nav-link">Tech Stack</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#certifications" class="nav-link">Certifications</a>
-        <a href="#activities" class="nav-link">Activities</a>
-        <a href="#stats" class="nav-link">Stats</a>
-        <a href="#contact" class="nav-link">Contact</a>
+            <a href="#home" class="nav-link active">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
 
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-          <span class="theme-icon sun">☀</span>
-          <span class="theme-icon moon">🌙</span>
-        </button>
-      </div>
-    </nav>
-  </header>
+            <a href="#about" class="nav-link">
+                <i class="fa-solid fa-user"></i>
+                About
+            </a>
 
-  <!-- ===== Hero Section ===== -->
-  <section class="hero" id="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-left">
-        <img src="profile.jpg" alt="Neeraj Singh" class="profile-photo">
+            <a href="#experience" class="nav-link">
+                <i class="fa-solid fa-briefcase"></i>
+                Experience
+            </a>
 
-        <div class="hero-social">
-          <a href="mailto:nsingh0399@gmail.com" aria-label="Email">
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail">
-          </a>
-          <a href="https://linkedin.com/in/neeraj-singh-b8b469280" target="_blank" aria-label="LinkedIn">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-          </a>
-          <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
-          </a>
-        </div>
-      </div>
+            <a href="#skills" class="nav-link">
+                <i class="fa-solid fa-microchip"></i>
+                Skills
+            </a>
 
-      <div class="hero-right">
-        <p class="hero-tag">Android Developer • Kotlin • Java</p>
-        <h1>Hi, I'm <span>Neeraj Singh</span></h1>
-        <p class="hero-typed">
-          <span id="typed-text"></span><span class="cursor">|</span>
-        </p>
-        <p class="hero-desc">
-          I build fast, modern Android apps using Kotlin and Jetpack Compose with clean architecture,
-          intuitive UI, and production-ready Firebase integration.
-        </p>
+            <a href="#projects" class="nav-link">
+                <i class="fa-solid fa-robot"></i>
+                Projects
+            </a>
 
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#certifications" class="btn btn-outline">View Certificates</a>
-          <a href="Neeraj_Singh_Resume.pdf" download="Neeraj_Singh_Resume.pdf" class="btn btn-ghost">
-            Download Resume
-          </a>
+            <a href="#education" class="nav-link">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Learning
+            </a>
+
+            <a href="#contact" class="nav-link">
+                <i class="fa-solid fa-envelope"></i>
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <button
+                id="theme-toggle"
+                class="theme-toggle"
+                aria-label="Switch to light mode"
+            >
+                <i class="fa-solid fa-sun"></i>
+            </button>
+
+            <button
+                id="nav-toggle"
+                class="nav-toggle"
+                aria-label="Open navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
         </div>
 
-        <div class="hero-meta">
-          <div class="hero-meta-item">
-            <span class="label">Location</span>
-            <span class="value">Kurukshetra, India</span>
-          </div>
-          <div class="hero-meta-item">
-            <span class="label">Availability</span>
-            <span class="value">Open to SDE / Android Intern roles</span>
-          </div>
-        </div>
-      </div>
     </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section id="home" class="hero">
+
+    <div class="hero-container">
+
+        <div class="hero-content" data-aos="fade-right">
+
+            <div class="availability">
+                <span></span>
+                Available for opportunities
+            </div>
+
+
+            <p class="hello-text">
+                HELLO, I'M
+            </p>
+
+
+            <h1>
+                Neeraj Singh
+            </h1>
+
+
+            <div class="hero-role">
+
+                <span>I'm a </span>
+
+                <strong id="typing-text">
+                    Robotics & Embedded Systems Engineer
+                </strong>
+
+                <b>|</b>
+
+            </div>
+
+
+            <p class="hero-description">
+
+                Computer Science graduate working across
+                <strong>Robotics, Embedded Systems, IoT, AI,
+                STEM Education and Android Development.</strong>
+
+                I enjoy turning ideas into practical,
+                working projects.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#projects"
+                    class="btn btn-primary"
+                >
+                    <i class="fa-solid fa-rocket"></i>
+                    View Projects
+                </a>
+
+                <a
+                    href="#contact"
+                    class="btn btn-outline"
+                >
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Contact Me
+                </a>
+
+            </div>
+
+
+            <div class="hero-socials">
+
+                <a
+                    href="mailto:nsingh0399@gmail.com"
+                    aria-label="Gmail"
+                >
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/neeraj-singh-b8b469280/"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="LinkedIn"
+                >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a
+                    href="https://github.com/nsingh0399"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="GitHub"
+                >
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a
+                    href="https://leetcode.com/u/nsingh0399/"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="LeetCode"
+                >
+                    <i class="fa-solid fa-code"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PROFILE VISUAL
+        ================================================== -->
+
+        <div class="hero-visual" data-aos="fade-left">
+
+            <div class="profile-glow"></div>
+
+            <div class="profile-card">
+
+                <div class="profile-ring">
+
+                    <img
+                        src="profile2.png"
+                        alt="Neeraj Singh"
+                        class="profile-image"
+                    >
+
+                </div>
+
+
+                <div class="profile-info">
+
+                    <h2>Neeraj Singh</h2>
+
+                    <p>
+                        Robotics • Embedded • IoT
+                    </p>
+
+                    <div class="profile-status">
+                        <span></span>
+                        Building & Learning
+                    </div>
+
+                </div>
+
+
+                <div class="profile-tech">
+
+                    <span>
+                        <i class="devicon-arduino-plain colored"></i>
+                    </span>
+
+                    <span>
+                        <i class="devicon-cplusplus-plain colored"></i>
+                    </span>
+
+                    <span>
+                        <i class="devicon-python-plain colored"></i>
+                    </span>
+
+                    <span>
+                        <i class="devicon-java-plain colored"></i>
+                    </span>
+
+                    <span>
+                        <i class="devicon-kotlin-plain colored"></i>
+                    </span>
+
+                    <span>
+                        <i class="devicon-android-plain colored"></i>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Floating logos -->
+
+            <div class="floating-logo logo-arduino">
+                <i class="devicon-arduino-plain colored"></i>
+            </div>
+
+            <div class="floating-logo logo-python">
+                <i class="devicon-python-plain colored"></i>
+            </div>
+
+            <div class="floating-logo logo-java">
+                <i class="devicon-java-plain colored"></i>
+            </div>
+
+            <div class="floating-logo logo-kotlin">
+                <i class="devicon-kotlin-plain colored"></i>
+            </div>
+
+            <div class="floating-logo logo-cpp">
+                <i class="devicon-cplusplus-plain colored"></i>
+            </div>
+
+            <div class="floating-logo logo-android">
+                <i class="devicon-android-plain colored"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+
     <a href="#about" class="scroll-down">
-      Scroll Down
-      <span class="scroll-icon">↓</span>
+
+        <span>Explore</span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
     </a>
-  </section>
 
-  <!-- ===== About Section ===== -->
-  <section id="about" class="fade-section">
-    <h2>Career Objective</h2>
-    <div class="section-content grid-2">
-      <p>
-        To begin my career in a dynamic and growth-oriented organization where I can apply my knowledge,
-        learn from experts, and contribute to organizational success. Leveraging my expertise in Android
-        and Kotlin to build intuitive, high-performance applications that deliver exceptional user experiences.
-      </p>
-      <div class="about-card">
-        <h3>What I Focus On</h3>
-        <ul>
-          <li>Clean, maintainable Kotlin code with MVVM / modern patterns.</li>
-          <li>Jetpack Compose-based UI with smooth UX and animations.</li>
-          <li>Firebase-backed apps with secure authentication & realtime data.</li>
-          <li>Optimizing performance, networking, and offline-first experiences.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Skills Section ===== -->
-<section id="skills" class="fade-section">
-  <h2>Skills</h2>
-
-  <h3>Main Expertise</h3>
-  <ul class="skill-list">
-    <li class="skill-item">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin icon">
-      <span>Kotlin</span>
-    </li>
-    <li class="skill-item">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetpackcompose/jetpackcompose-plain.svg" alt="Jetpack Compose icon">
-      <span>Jetpack Compose</span>
-    </li>
-    <li class="skill-item">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android icon">
-      <span>Android App Development</span>
-    </li>
-    <li class="skill-item">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase icon">
-      <span>Firebase</span>
-    </li>
-  </ul>
-
-  <h3>Additional Skills</h3>
-  <ul class="skill-list">
-    <li class="skill-item">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java icon">
-      <span>Java</span>
-    </li>
-    <li class="skill-item">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C icon">
-      <span>C</span>
-    </li>
-    <li class="skill-item">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ icon">
-      <span>C++</span>
-    </li>
-    <li class="skill-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" alt="DSA icon">
-      <span>Data Structures & Algorithms (DSA)</span>
-    </li>
-    <li class="skill-item">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux icon">
-      <span>Unix / Linux</span>
-    </li>
-    <li class="skill-item">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="DBMS icon">
-      <span>Database Management Systems (DBMS)</span>
-    </li>
-    <li class="skill-item">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python icon">
-      <span>Python</span>
-    </li>
-    <li class="skill-item">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML icon">
-      <span>HTML</span>
-    </li>
-  </ul>
 </section>
 
-  <!-- ===== Tech Stack Section ===== -->
-  <section id="techstack" class="fade-section">
-    <h2>Tech Stack</h2>
-    <p class="section-subtitle">Tools & technologies I use to build Android apps.</p>
-    <div class="tech-icons">
-      <div class="tech-chip">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin">
-        <span>Kotlin</span>
-      </div>
-      <div class="tech-chip">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-        <span>Java</span>
-      </div>
-      <div class="tech-chip">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android">
-        <span>Android</span>
-      </div>
-      <div class="tech-chip">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
-        <span>Firebase</span>
-      </div>
-      <div class="tech-chip">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-        <span>Git & GitHub</span>
-      </div>
-    </div>
-  </section>
 
-<!-- ===== Projects Section ===== -->
-<section id="projects" class="fade-section">
-  <h2>Projects</h2>
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
-  <div class="projects-grid">
+<section id="about" class="section">
 
-    <!-- Project 1: Nearby Service -->
-    <article class="project-item">
-      <div class="project-header">
-        <h3 class="project-title">Nearby Service (Android App)</h3>
-        <span class="project-tag">Live • Kotlin • Services Finder</span>
-      </div>
-      <p class="project-short">
-        An Android app that helps users discover nearby services (like salons, electricians, mechanics, etc.)
-        with a clean UI, category-based browsing, and quick contact options.
-      </p>
-      <ul class="project-features">
-        <li><strong>Service Discovery:</strong> Browse local services by category and distance.</li>
-        <li><strong>User-Friendly UI:</strong> Jetpack Compose interface with modern cards and filters.</li>
-        <li><strong>Quick Actions:</strong> Call / WhatsApp directly from the app to contact the provider.</li>
-        <li>Designed to be lightweight and responsive, suitable for low-end devices as well.</li>
-      </ul>
-      <div class="project-meta">
-        <span class="meta-label">Tech:</span>
-        <span class="meta-value">Kotlin, Jetpack Compose, (Future: Maps / REST APIs)</span>
-      </div>
-      <div class="project-links project-buttons">
-        <button class="btn btn-outline-sm preview-btn" onclick="openPreview('nearby')">
-          Preview App
-        </button>
-        <a href="nearby-service.apk" download class="btn btn-primary-sm">
-          Download APK
-        </a>
-      </div>
-    </article>
+    <div class="container">
 
-    <!-- Project 2: Loan Drive -->
-    <article class="project-item">
-      <div class="project-header">
-        <h3 class="project-title">Loan Drive (Android App)</h3>
-        <span class="project-tag">Production-ready • Kotlin • Finance</span>
-      </div>
-      <p class="project-short">
-        A vehicle affordability calculator app that helps users understand how much car or bike they can afford
-        using practical financial rules, with clean UI and Firebase authentication.
-      </p>
-      <ul class="project-features">
-        <li><strong>Google Login:</strong> Secure authentication using Firebase Authentication.</li>
-        <li><strong>Car Calculator:</strong> Uses the "20-4-10" rule to estimate income, EMI, and loan duration.</li>
-        <li><strong>Bike Calculator:</strong> Similar logic customized for two-wheelers with flexible inputs.</li>
-        <li>UI built fully in Jetpack Compose with responsive layouts and card-based design.</li>
-      </ul>
-      <div class="project-meta">
-        <span class="meta-label">Tech:</span>
-        <span class="meta-value">Kotlin, Jetpack Compose, Firebase Auth, Material 3</span>
-      </div>
-      <div class="project-links project-buttons">
-        <button class="btn btn-outline-sm preview-btn" onclick="openPreview('loan')">
-          Preview App
-        </button>
-        <a href="loan-drive.apk" download class="btn btn-primary-sm">
-          Download APK
-        </a>
-      </div>
-    </article>
+        <div class="section-heading" data-aos="fade-up">
 
-    <!-- Project 3: Smart Expense Tracker -->
-    <article class="project-item">
-      <div class="project-header">
-        <h3 class="project-title">Smart Expense Tracker (Android App)</h3>
-        <span class="project-tag">Finance • Kotlin • Firebase</span>
-      </div>
-      <p class="project-short">
-        An Android application to help users track monthly expenses, analyze spending patterns,
-        and view category-wise breakdowns with charts and visualizations.
-      </p>
-      <ul class="project-features">
-        <li><strong>Expense Management:</strong> Add, edit, and delete expenses with category tags and notes.</li>
-        <li><strong>Charts & Insights:</strong> Visual representation of spending (by category, month etc.).</li>
-        <li><strong>Cloud Sync:</strong> Firebase-backed user data for easy access across devices.</li>
-        <li>Modern Compose UI with smooth layouts and focus on usability and clarity.</li>
-      </ul>
-      <div class="project-meta">
-        <span class="meta-label">Tech:</span>
-        <span class="meta-value">Kotlin, Jetpack Compose, Firebase, (Optional: MPAndroidChart)</span>
-      </div>
-      <div class="project-links project-buttons">
-        <button class="btn btn-outline-sm preview-btn" onclick="openPreview('expense')">
-          Preview App
-        </button>
-        <a href="smart-expense.apk" download class="btn btn-primary-sm">
-          Download APK
-        </a>
-      </div>
-    </article>
+            <span class="section-label">
+                <i class="fa-solid fa-user-astronaut"></i>
+                ABOUT ME
+            </span>
 
-    <!-- Project 4: CampusDrive -->
-    <article class="project-item">
-      <div class="project-header">
-        <h3 class="project-title">CampusDrive (Android App, Under Development)</h3>
-        <span class="project-tag project-tag-soon">In Progress • Kotlin • College Utility</span>
-      </div>
-      <p class="project-short">
-        A resource hub for college students to quickly access PYQs, notes, and other study materials,
-        organized by semester and subject with fast PDF downloads.
-      </p>
-      <ul class="project-features">
-        <li><strong>Organized Content:</strong> Subject & semester-wise study material browsing.</li>
-        <li><strong>Fast Access:</strong> Simple UI for quick PDF downloads.</li>
-        <li><strong>Admin Panel (Planned):</strong> Easy upload & management of content.</li>
-        <li>Future features: offline mode, push notifications, search and bookmarking.</li>
-      </ul>
-      <div class="project-meta">
-        <span class="meta-label">Tech:</span>
-        <span class="meta-value">Kotlin, Jetpack Compose, (Planned: Firebase Storage, Cloud Functions)</span>
-      </div>
-      <div class="project-links project-buttons">
-        <button class="btn btn-outline-sm preview-btn" onclick="openPreview('campus')">
-          Preview App
-        </button>
-        <span class="badge-coming-soon">Coming Soon</span>
-      </div>
-    </article>
+            <h2>
+                A Developer Who Likes To
+                <span>Build Things</span>
+            </h2>
 
-  </div>
-</section>
-
-<!-- ===== Education Section ===== -->
-<section id="education" class="fade-section">
-  <h2>Education</h2>
-
-  <div class="timeline">
-
-    <!-- B.Tech -->
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>B.Tech in Computer Science & Engineering</h3>
-        <p class="timeline-meta">UIET, Kurukshetra University · 2022 – 2026</p>
-        <p>
-          Coursework includes Data Structures & Algorithms, Operating Systems, DBMS,
-          Computer Networks, and Mobile Application Development.
-        </p>
-      </div>
-    </div>
-
-    <!-- Class 12 -->
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>Senior Secondary (Class 12)</h3>
-        <p class="timeline-meta">Kendriya Vidyalaya No. 1, Faridabad · CBSE · 2022</p>
-        <p>
-          Specialized in PCM (Physics, Chemistry, Mathematics) with Computer Science foundation.
-        </p>
-      </div>
-    </div>
-
-    <!-- Class 10 -->
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>Secondary (Class 10)</h3>
-        <p class="timeline-meta">Kendriya Vidyalaya No. 1, Faridabad · CBSE · 2020</p>
-        <p>
-          Cleared foundational academics with strong interest in technology & computers.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== Certifications Section ===== -->
-<section id="certifications" class="fade-section">
-  <h2>Certifications</h2>
-
-  <div class="certification-grid">
-
-    <!-- Certificate 1 -->
-    <div class="cert-card" onclick="openCertificate('Android App Development with AI Training - Certificate of Completion.pdf')">
-      <h3>Android App Development with AI</h3>
-      <p><strong>Platform:</strong> Internshala</p>
-      <p><strong>Completion Date:</strong> 01 Sept 2024</p>
-      <p>Covered Kotlin + Jetpack Compose + Firebase + AI modules.</p>
-      <button class="view-btn">View Certificate</button>
-    </div>
-
-    <!-- Certificate 2 -->
-    <div class="cert-card" onclick="openCertificate('Core Java Training - Certificate of Completion.pdf')">
-      <h3>Core Java Training</h3>
-      <p><strong>Platform:</strong> Internshala</p>
-      <p><strong>Completion Date:</strong> 09 Aug 2023</p>
-      <p>6-week Java course, Scored 88%.</p>
-      <button class="view-btn">View Certificate</button>
-    </div>
-
-    <!-- Certificate 3 -->
-    <div class="cert-card" onclick="openCertificate('certificate_TD-NEER-DP-1130.pdf')">
-      <h3>DSA with Python</h3>
-      <p><strong>Platform:</strong> TuteDude</p>
-      <p><strong>Completion Date:</strong> 01 Sept 2025</p>
-      <p>Completed DSA + Problem Solving Course.</p>
-      <button class="view-btn">View Certificate</button>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== Extracurricular Activities ===== -->
-<section id="activities" class="fade-section">
-  <h2>Extracurricular Activities</h2>
-
-  <div class="activity-grid">
-    <div class="activity-card" onclick="openCertificate('delloite certificate.pdf')">
-      <h3>Deloitte Technology Job Simulation</h3>
-      <p><strong>Platform:</strong> Forage</p>
-      <p><strong>Date:</strong> July 2025</p>
-      <p>Hands-on simulation experience in coding & development process.</p>
-      <button class="view-btn">View Certificate</button>
-    </div>
-  </div>
-</section>
-
-  <!-- ===== Stats Section ===== -->
-  <section id="stats" class="fade-section">
-    <h2>My Stats</h2>
-    <p class="section-subtitle">A quick snapshot of my journey so far.</p>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <h3 class="stat-number" data-target="3">0</h3>
-        <p>Projects Completed</p>
-      </div>
-      <div class="stat-card">
-        <h3 class="stat-number" data-target="200">0</h3>
-        <p>Hours of Coding</p>
-      </div>
-      <div class="stat-card">
-        <h3 class="stat-number" data-target="4">0</h3>
-        <p>Certifications Earned</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Contact Section ===== -->
-  <section id="contact" class="fade-section">
-    <h2>Contact Me</h2>
-    <p class="section-subtitle">
-      Have an opportunity, internship, or collaboration in mind? Let’s talk.
-    </p>
-    <div class="contact-wrapper">
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" id="contact-form">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input id="name" type="text" name="name" placeholder="Enter your name" required />
         </div>
-        <div class="form-group">
-          <label for="email">Your Email</label>
-          <input id="email" type="email" name="_replyto" placeholder="Enter your email" required />
+
+
+        <div class="about-grid">
+
+            <div
+                class="about-photo-card"
+                data-aos="fade-right"
+            >
+
+                <img
+                    src="profile.jpg"
+                    alt="Neeraj Singh profile photo"
+                >
+
+                <div class="about-photo-overlay">
+
+                    <strong>Neeraj Singh</strong>
+
+                    <span>
+                        CSE • Robotics • STEM • Android
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="about-content"
+                data-aos="fade-left"
+            >
+
+                <h3>
+                    From Code To Circuits
+                </h3>
+
+                <p>
+                    I am a Computer Science graduate with
+                    hands-on experience across Robotics,
+                    Embedded Systems, Arduino, ESP, IoT,
+                    AI, STEM Education and Android Development.
+                </p>
+
+                <p>
+                    As a Robotics & AI STEM Trainer, I conduct
+                    practical sessions and school workshops where
+                    students learn coding, electronics, sensors,
+                    robotics and AI by actually building projects.
+                </p>
+
+                <p>
+                    Alongside hardware, I develop Android
+                    applications using Java, Kotlin,
+                    Jetpack Compose and Firebase.
+                </p>
+
+
+                <div class="about-highlights">
+
+                    <div>
+                        <i class="fa-solid fa-robot"></i>
+                        <span>Robotics</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-microchip"></i>
+                        <span>Embedded</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-wifi"></i>
+                        <span>IoT</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-brands fa-android"></i>
+                        <span>Android</span>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="form-group">
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" placeholder="Tell me about your project or query" rows="5" required></textarea>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section id="experience" class="section">
+
+    <div class="container">
+
+        <div class="section-heading" data-aos="fade-up">
+
+            <span class="section-label">
+                <i class="fa-solid fa-briefcase"></i>
+                EXPERIENCE
+            </span>
+
+            <h2>
+                My Professional
+                <span>Experience</span>
+            </h2>
+
         </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-        <p class="form-status" id="form-status"></p>
-      </form>
 
-      <div class="contact-side">
-        <h3>Other ways to reach me</h3>
-        <ul>
-          <li><strong>Email:</strong> <a href="mailto:nsingh0399@gmail.com">nsingh0399@gmail.com</a></li>
-          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/neeraj-singh-b8b469280" target="_blank">neeraj-singh-b8b469280</a></li>
-          <li><strong>GitHub:</strong> <a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a></li>
-        </ul>
-        <div class="contact-icons">
-          <a href="mailto:nsingh0399@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail"></a>
-          <a href="https://linkedin.com/in/neeraj-singh-b8b469280" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
-          <a href="https://github.com/yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub"></a>
+
+        <div class="timeline">
+
+            <div class="timeline-line"></div>
+
+
+            <!-- STEMOID -->
+
+            <article
+                class="experience-card"
+                data-aos="fade-up"
+            >
+
+                <div class="timeline-dot">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+
+
+                <div class="experience-top">
+
+                    <div>
+
+                        <span class="experience-date">
+                            APR 2026 — PRESENT
+                        </span>
+
+                        <h3>
+                            Robotics & AI (STEM) Trainer
+                        </h3>
+
+                        <h4>
+                            Stemoid • Stempedia
+                        </h4>
+
+                        <p class="location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Abohar, Punjab
+                        </p>
+
+                    </div>
+
+                    <div class="experience-logo">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                </div>
+
+
+                <ul>
+
+                    <li>
+                        Conduct hands-on STEM, Robotics,
+                        Coding and AI sessions for Classes 4–10.
+                    </li>
+
+                    <li>
+                        Teach Arduino, Quarky, electronics,
+                        sensors, actuators and embedded concepts.
+                    </li>
+
+                    <li>
+                        Conduct and support school workshops
+                        covering Arduino, ESP, robotics,
+                        programming and electronics.
+                    </li>
+
+                    <li>
+                        Guide students through hardware assembly,
+                        circuit connections, programming,
+                        testing and debugging.
+                    </li>
+
+                    <li>
+                        Develop logical thinking, computational
+                        thinking and problem-solving skills.
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- NIELIT -->
+
+            <article
+                class="experience-card"
+                data-aos="fade-up"
+            >
+
+                <div class="timeline-dot">
+                    <i class="devicon-python-plain"></i>
+                </div>
+
+
+                <div class="experience-top">
+
+                    <div>
+
+                        <span class="experience-date">
+                            FEB 2026 — APR 2026
+                        </span>
+
+                        <h3>
+                            Work Based Learner (WBL)
+                        </h3>
+
+                        <h4>
+                            NIELIT Kurukshetra
+                        </h4>
+
+                        <p class="location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Kurukshetra, Haryana
+                        </p>
+
+                    </div>
+
+                    <div class="experience-logo python-bg">
+                        <i class="devicon-python-plain"></i>
+                    </div>
+
+                </div>
+
+
+                <ul>
+
+                    <li>
+                        Worked as a Work Based Learner (WBL)
+                        at NIELIT Kurukshetra.
+                    </li>
+
+                    <li>
+                        Delivered foundational Python programming
+                        training.
+                    </li>
+
+                    <li>
+                        Supported students with practical project
+                        development and problem solving.
+                    </li>
+
+                </ul>
+
+            </article>
+
         </div>
-      </div>
+
     </div>
-  </section>
 
-  <!-- ===== Footer ===== -->
-  <footer>
-    <p>&copy; 2025 Neeraj Singh • Android Developer</p>
-    <div class="footer-social">
-      <a href="https://github.com/yourprofile" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
-      </a>
-      <a href="https://linkedin.com/in/neeraj-singh-b8b469280" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-      </a>
-      <a href="mailto:nsingh0399@gmail.com">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
-      </a>
+</section>
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section id="skills" class="section skills-section">
+
+    <div class="container">
+
+        <div class="section-heading" data-aos="fade-up">
+
+            <span class="section-label">
+                <i class="fa-solid fa-microchip"></i>
+                SKILLS
+            </span>
+
+            <h2>
+                My Technical
+                <span>Toolkit</span>
+            </h2>
+
+        </div>
+
+
+        <div class="skill-grid">
+
+
+            <!-- Embedded -->
+
+            <div class="skill-box" data-aos="fade-up">
+
+                <div class="skill-box-header purple">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                    <div>
+                        <h3>Embedded & IoT</h3>
+                        <p>Hardware & connected systems</p>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-list">
+
+                    <span>
+                        <i class="devicon-arduino-plain colored"></i>
+                        Arduino
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-microchip"></i>
+                        ESP
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-memory"></i>
+                        Microcontrollers
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-wave-square"></i>
+                        Sensors
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-bolt"></i>
+                        GPIO
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-wifi"></i>
+                        IoT
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Robotics -->
+
+            <div class="skill-box" data-aos="fade-up">
+
+                <div class="skill-box-header blue">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    <div>
+                        <h3>Robotics</h3>
+                        <p>Robots & automation</p>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-list">
+
+                    <span>
+                        <i class="fa-solid fa-robot"></i>
+                        Quarky
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-radar"></i>
+                        Ultrasonic
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-fire"></i>
+                        Flame Sensors
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-gears"></i>
+                        Motor Drivers
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-rotate"></i>
+                        Servo Motors
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-fan"></i>
+                        BO Motors
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming -->
+
+            <div class="skill-box" data-aos="fade-up">
+
+                <div class="skill-box-header orange">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <div>
+                        <h3>Programming</h3>
+                        <p>Languages & logic</p>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-list">
+
+                    <span>
+                        <i class="devicon-cplusplus-plain colored"></i>
+                        C / C++
+                    </span>
+
+                    <span>
+                        <i class="devicon-python-plain colored"></i>
+                        Python
+                    </span>
+
+                    <span>
+                        <i class="devicon-java-plain colored"></i>
+                        Java
+                    </span>
+
+                    <span>
+                        <i class="devicon-kotlin-plain colored"></i>
+                        Kotlin
+                    </span>
+
+                    <span>
+                        <i class="devicon-html5-plain colored"></i>
+                        HTML
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-cubes"></i>
+                        Scratch
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Android -->
+
+            <div class="skill-box" data-aos="fade-up">
+
+                <div class="skill-box-header green">
+
+                    <i class="fa-brands fa-android"></i>
+
+                    <div>
+                        <h3>Android Development</h3>
+                        <p>Apps & cloud backend</p>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-list">
+
+                    <span>
+                        <i class="devicon-android-plain colored"></i>
+                        Android
+                    </span>
+
+                    <span>
+                        <i class="devicon-kotlin-plain colored"></i>
+                        Kotlin
+                    </span>
+
+                    <span>
+                        <i class="devicon-java-plain colored"></i>
+                        Java
+                    </span>
+
+                    <span>
+                        <i class="devicon-firebase-plain colored"></i>
+                        Firebase
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-database"></i>
+                        Firestore
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-table"></i>
+                        SQL
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Tools -->
+
+            <div class="skill-box" data-aos="fade-up">
+
+                <div class="skill-box-header cyan">
+
+                    <i class="fa-solid fa-toolbox"></i>
+
+                    <div>
+                        <h3>Tools</h3>
+                        <p>Development workflow</p>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-list">
+
+                    <span>
+                        <i class="devicon-androidstudio-plain colored"></i>
+                        Android Studio
+                    </span>
+
+                    <span>
+                        <i class="devicon-visualstudio-plain colored"></i>
+                        VS Code
+                    </span>
+
+                    <span>
+                        <i class="devicon-github-original"></i>
+                        GitHub
+                    </span>
+
+                    <span>
+                        <i class="devicon-git-plain colored"></i>
+                        Git
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-code"></i>
+                        Arduino IDE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI / STEM -->
+
+            <div class="skill-box" data-aos="fade-up">
+
+                <div class="skill-box-header pink">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <div>
+                        <h3>AI & STEM</h3>
+                        <p>Education & problem solving</p>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-list">
+
+                    <span>
+                        <i class="fa-solid fa-brain"></i>
+                        AI Fundamentals
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        STEM Education
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-lightbulb"></i>
+                        Problem Solving
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-project-diagram"></i>
+                        Project Learning
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-  </footer>
 
-  <!-- Scroll To Top Button -->
-  <button id="scroll-top" aria-label="Scroll to top">↑</button>
+</section>
 
-  <script src="script.js"></script>
 
-  <!-- ================= Certificate Viewer Modal ================= -->
-<div id="certificateModal" class="certificate-modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeCertificate()">&times;</span>
-    <embed id="certificateFrame" type="application/pdf" width="100%" height="100%">
-  </div>
-</div>
+<!-- =====================================================
+     TECHNOLOGY CLOUD
+===================================================== -->
 
-<!-- ========== APP SCREEN PREVIEW MODAL ========== -->
-<div id="appPreviewModal" class="preview-modal">
-  <span class="closePreview" onclick="closePreview()">✕</span>
+<section class="section technology-section">
 
-  <div class="preview-slider">
-    <img id="previewImage" src="" alt="App Preview">
+    <div class="container">
 
-    <div class="preview-controls">
-      <button onclick="prevImage()">⟨</button>
-      <button onclick="nextImage()">⟩</button>
+        <div class="section-heading">
+
+            <span class="section-label">
+                <i class="fa-solid fa-icons"></i>
+                TECHNOLOGIES
+            </span>
+
+            <h2>
+                Technologies I
+                <span>Work With</span>
+            </h2>
+
+        </div>
+
+
+        <div class="technology-cloud">
+
+            <div class="technology">
+                <i class="devicon-arduino-plain colored"></i>
+                <span>Arduino</span>
+            </div>
+
+            <div class="technology">
+                <i class="devicon-cplusplus-plain colored"></i>
+                <span>C++</span>
+            </div>
+
+            <div class="technology">
+                <i class="devicon-python-plain colored"></i>
+                <span>Python</span>
+            </div>
+
+            <div class="technology">
+                <i class="devicon-java-plain colored"></i>
+                <span>Java</span>
+            </div>
+
+            <div class="technology">
+                <i class="devicon-kotlin-plain colored"></i>
+                <span>Kotlin</span>
+            </div>
+
+            <div class="technology">
+                <i class="devicon-android-plain colored"></i>
+                <span>Android</span>
+            </div>
+
+            <div class="technology">
+                <i class="devicon-firebase-plain colored"></i>
+                <span>Firebase</span>
+            </div>
+
+            <div class="technology">
+                <i class="devicon-github-original"></i>
+                <span>GitHub</span>
+            </div>
+
+            <div class="technology">
+                <i class="devicon-git-plain colored"></i>
+                <span>Git</span>
+            </div>
+
+            <div class="technology">
+                <i class="devicon-html5-plain colored"></i>
+                <span>HTML</span>
+            </div>
+
+            <div class="technology">
+                <i class="devicon-androidstudio-plain colored"></i>
+                <span>Android Studio</span>
+            </div>
+
+            <div class="technology">
+                <i class="devicon-visualstudio-plain colored"></i>
+                <span>VS Code</span>
+            </div>
+
+        </div>
+
     </div>
-  </div>
-</div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects" class="section projects-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                <i class="fa-solid fa-robot"></i>
+                PROJECTS
+            </span>
+
+            <h2>
+                Things I Have
+                <span>Built</span>
+            </h2>
+
+            <p>
+                Practical projects combining hardware,
+                software and problem solving.
+            </p>
+
+        </div>
+
+
+        <div class="project-filter">
+
+            <button
+                class="filter-btn active"
+                data-filter="all"
+            >
+                All
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="robotics"
+            >
+                Robotics
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="android"
+            >
+                Android
+            </button>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- FIRE ROBOT -->
+
+            <article
+                class="project-card"
+                data-category="robotics"
+                data-aos="fade-up"
+            >
+
+                <div class="project-image fire">
+
+                    <i class="fa-solid fa-fire"></i>
+
+                    <span>
+                        ROBOTICS
+                    </span>
+
+                </div>
+
+
+                <div class="project-body">
+
+                    <small>
+                        PROJECT 01
+                    </small>
+
+                    <h3>
+                        Arduino Fire-Fighting Robot
+                    </h3>
+
+                    <p>
+                        Built a sensor-based fire-fighting robot
+                        integrating flame detection, motor control,
+                        servo positioning and water-pump actuation.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Arduino Uno</span>
+                        <span>Flame Sensor</span>
+                        <span>Servo</span>
+                        <span>BO Motors</span>
+
+                    </div>
+
+
+                    <div class="project-actions">
+
+                        <a
+                            href="INSTAGRAM_REEL_LINK"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-btn instagram"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                            Instagram Reel
+                        </a>
+
+                        <a
+                            href="YOUTUBE_LINK"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-btn youtube"
+                        >
+                            <i class="fa-brands fa-youtube"></i>
+                            YouTube
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- OBSTACLE -->
+
+            <article
+                class="project-card"
+                data-category="robotics"
+                data-aos="fade-up"
+            >
+
+                <div class="project-image obstacle">
+
+                    <i class="fa-solid fa-radar"></i>
+
+                    <span>
+                        ROBOTICS
+                    </span>
+
+                </div>
+
+
+                <div class="project-body">
+
+                    <small>
+                        PROJECT 02
+                    </small>
+
+                    <h3>
+                        Arduino Obstacle-Avoidance Robot
+                    </h3>
+
+                    <p>
+                        Developed an autonomous robot using ultrasonic
+                        distance sensing and Arduino-based movement
+                        control to detect and avoid obstacles.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Arduino</span>
+                        <span>Ultrasonic</span>
+                        <span>Motor Driver</span>
+                        <span>BO Motors</span>
+
+                    </div>
+
+
+                    <div class="project-actions">
+
+                        <a
+                            href="INSTAGRAM_REEL_LINK"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-btn instagram"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                            Instagram Reel
+                        </a>
+
+                        <a
+                            href="YOUTUBE_LINK"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-btn youtube"
+                        >
+                            <i class="fa-brands fa-youtube"></i>
+                            YouTube
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- DUSTBIN -->
+
+            <article
+                class="project-card"
+                data-category="robotics"
+                data-aos="fade-up"
+            >
+
+                <div class="project-image waste">
+
+                    <i class="fa-solid fa-trash-can"></i>
+
+                    <span>
+                        IOT / ROBOTICS
+                    </span>
+
+                </div>
+
+
+                <div class="project-body">
+
+                    <small>
+                        PROJECT 03
+                    </small>
+
+                    <h3>
+                        Smart Dry-Wet Waste Dustbin
+                    </h3>
+
+                    <p>
+                        Built an automated waste-segregation prototype
+                        using moisture detection and servo-controlled
+                        sorting.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Arduino</span>
+                        <span>Moisture Sensor</span>
+                        <span>Servo</span>
+
+                    </div>
+
+
+                    <div class="project-actions">
+
+                        <a
+                            href="INSTAGRAM_REEL_LINK"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-btn instagram"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                            Instagram Reel
+                        </a>
+
+                        <a
+                            href="YOUTUBE_LINK"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-btn youtube"
+                        >
+                            <i class="fa-brands fa-youtube"></i>
+                            YouTube
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- NEARBY -->
+
+            <article
+                class="project-card"
+                data-category="android"
+                data-aos="fade-up"
+            >
+
+                <div class="project-image android">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        ANDROID
+                    </span>
+
+                </div>
+
+
+                <div class="project-body">
+
+                    <small>
+                        PROJECT 04
+                    </small>
+
+                    <h3>
+                        Nearby Service Android App
+                    </h3>
+
+                    <p>
+                        Android application for discovering nearby
+                        shops and services with Firebase Authentication
+                        and Firestore.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Kotlin</span>
+                        <span>Jetpack Compose</span>
+                        <span>Firebase</span>
+
+                    </div>
+
+
+                    <div class="project-actions">
+
+                        <a
+                            href="nearby-preview.html"
+                            class="project-btn preview"
+                        >
+                            <i class="fa-solid fa-eye"></i>
+                            Preview
+                        </a>
+
+                        <a
+                            href="nearby-service.apk"
+                            download
+                            class="project-btn download"
+                        >
+                            <i class="fa-solid fa-download"></i>
+                            Download APK
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- EXPENSE -->
+
+            <article
+                class="project-card"
+                data-category="android"
+                data-aos="fade-up"
+            >
+
+                <div class="project-image expense">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                    <span>
+                        ANDROID
+                    </span>
+
+                </div>
+
+
+                <div class="project-body">
+
+                    <small>
+                        PROJECT 05
+                    </small>
+
+                    <h3>
+                        Smart Expense Tracker
+                    </h3>
+
+                    <p>
+                        Android expense tracker with categorization,
+                        monthly tracking, Firebase synchronization
+                        and spending visualizations.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Kotlin</span>
+                        <span>Compose</span>
+                        <span>Firebase</span>
+
+                    </div>
+
+
+                    <div class="project-actions">
+
+                        <a
+                            href="expense-preview.html"
+                            class="project-btn preview"
+                        >
+                            <i class="fa-solid fa-eye"></i>
+                            Preview
+                        </a>
+
+                        <a
+                            href="smart-expense.apk"
+                            download
+                            class="project-btn download"
+                        >
+                            <i class="fa-solid fa-download"></i>
+                            Download APK
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- LOAN DRIVE -->
+
+            <article
+                class="project-card"
+                data-category="android"
+                data-aos="fade-up"
+            >
+
+                <div class="project-image loan">
+
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    <span>
+                        ANDROID
+                    </span>
+
+                </div>
+
+
+                <div class="project-body">
+
+                    <small>
+                        PROJECT 06
+                    </small>
+
+                    <h3>
+                        Loan Drive
+                    </h3>
+
+                    <p>
+                        Android application project focused on
+                        creating a structured mobile experience
+                        using modern Android development.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Android</span>
+                        <span>Java</span>
+                        <span>Kotlin</span>
+
+                    </div>
+
+
+                    <div class="project-actions">
+
+                        <a
+                            href="loan-preview.html"
+                            class="project-btn preview"
+                        >
+                            <i class="fa-solid fa-eye"></i>
+                            Preview
+                        </a>
+
+                        <a
+                            href="loan-drive.apk"
+                            download
+                            class="project-btn download"
+                        >
+                            <i class="fa-solid fa-download"></i>
+                            Download APK
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CAMPUS -->
+
+            <article
+                class="project-card"
+                data-category="android"
+                data-aos="fade-up"
+            >
+
+                <div class="project-image campus">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <span>
+                        ANDROID
+                    </span>
+
+                </div>
+
+
+                <div class="project-body">
+
+                    <small>
+                        PROJECT 07
+                    </small>
+
+                    <h3>
+                        CampusDrive
+                    </h3>
+
+                    <p>
+                        Student-focused Android application project
+                        designed around a structured digital experience.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>Android</span>
+                        <span>Kotlin</span>
+                        <span>Firebase</span>
+
+                    </div>
+
+
+                    <div class="project-actions">
+
+                        <a
+                            href="campusdrive-preview.html"
+                            class="project-btn preview"
+                        >
+                            <i class="fa-solid fa-eye"></i>
+                            Preview
+                        </a>
+
+                        <a
+                            href="apk/campusdrive.apk"
+                            download
+                            class="project-btn download"
+                        >
+                            <i class="fa-solid fa-download"></i>
+                            Download APK
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section id="education" class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                <i class="fa-solid fa-graduation-cap"></i>
+                EDUCATION
+            </span>
+
+            <h2>
+                My Learning
+                <span>Journey</span>
+            </h2>
+
+        </div>
+
+
+        <div class="education-grid">
+
+
+            <div class="education-card large">
+
+                <div class="education-icon">
+                    <i class="fa-solid fa-university"></i>
+                </div>
+
+                <span class="education-year">
+                    2022 — 2026
+                </span>
+
+                <h3>
+                    B.Tech. Computer Science & Engineering
+                </h3>
+
+                <h4>
+                    UIET, Kurukshetra University
+                </h4>
+
+                <p>
+                    Computer Science, programming,
+                    software development and practical
+                    technology projects.
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <div class="education-icon orange">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+
+                <span class="education-year">
+                    2022
+                </span>
+
+                <h3>
+                    Class 12 — CBSE
+                </h3>
+
+                <h4>
+                    Kendriya Vidyalaya
+                </h4>
+
+                <strong class="score">
+                    70%
+                </strong>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <div class="education-icon green">
+                    <i class="fa-solid fa-book"></i>
+                </div>
+
+                <span class="education-year">
+                    2020
+                </span>
+
+                <h3>
+                    Class 10 — CBSE
+                </h3>
+
+                <h4>
+                    Kendriya Vidyalaya
+                </h4>
+
+                <strong class="score">
+                    90%
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     COURSES
+===================================================== -->
+
+<section class="section courses-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                <i class="fa-solid fa-book-open-reader"></i>
+                COURSES
+            </span>
+
+            <h2>
+                Courses &
+                <span>Continuous Learning</span>
+            </h2>
+
+            <p>
+                Short courses that strengthened my programming,
+                application development and data skills.
+            </p>
+
+        </div>
+
+
+        <div class="courses-grid">
+
+
+            <div class="course-card">
+
+                <div class="course-icon java">
+                    <i class="devicon-java-plain"></i>
+                </div>
+
+                <div>
+                    <span>PROGRAMMING</span>
+
+                    <h3>
+                        Core Java
+                    </h3>
+
+                    <p>
+                        Internshala
+                    </p>
+                </div>
+
+                <i class="fa-solid fa-check course-check"></i>
+
+            </div>
+
+
+            <div class="course-card">
+
+                <div class="course-icon android">
+                    <i class="devicon-android-plain"></i>
+                </div>
+
+                <div>
+                    <span>DEVELOPMENT</span>
+
+                    <h3>
+                        Android Development
+                    </h3>
+
+                    <p>
+                        Certified Android App Developer
+                    </p>
+                </div>
+
+                <i class="fa-solid fa-check course-check"></i>
+
+            </div>
+
+
+            <div class="course-card">
+
+                <div class="course-icon python">
+                    <i class="devicon-python-plain"></i>
+                </div>
+
+                <div>
+                    <span>PROGRAMMING</span>
+
+                    <h3>
+                        DSA with Python
+                    </h3>
+
+                    <p>
+                        TuteDude
+                    </p>
+                </div>
+
+                <i class="fa-solid fa-check course-check"></i>
+
+            </div>
+
+
+            <div class="course-card pursuing">
+
+                <div class="course-icon data">
+                    <i class="fa-solid fa-chart-column"></i>
+                </div>
+
+                <div>
+                    <span>CURRENTLY PURSUING</span>
+
+                    <h3>
+                        Data Science
+                    </h3>
+
+                    <p>
+                        Currently learning
+                    </p>
+                </div>
+
+                <i class="fa-solid fa-spinner course-check spin"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CERTIFICATIONS
+===================================================== -->
+
+<section class="section certifications">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                <i class="fa-solid fa-certificate"></i>
+                CERTIFICATIONS
+            </span>
+
+            <h2>
+                Certifications &
+                <span>Achievements</span>
+            </h2>
+
+        </div>
+
+
+        <div class="cert-grid">
+
+            <div class="cert-card">
+
+                <div class="cert-icon android">
+                    <i class="devicon-android-plain"></i>
+                </div>
+
+                <div>
+                    <h3>
+                        Certified Android App Developer
+                    </h3>
+
+                    <p>
+                        Android Development
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <div class="cert-icon java">
+                    <i class="devicon-java-plain"></i>
+                </div>
+
+                <div>
+                    <h3>
+                        Core Java Certificate
+                    </h3>
+
+                    <p>
+                        Internshala
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <div class="cert-icon python">
+                    <i class="devicon-python-plain"></i>
+                </div>
+
+                <div>
+                    <h3>
+                        DSA with Python
+                    </h3>
+
+                    <p>
+                        TuteDude
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BEYOND CLASSROOM
+===================================================== -->
+
+<section class="section workshop-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                BEYOND THE CLASSROOM
+            </span>
+
+            <h2>
+                Sharing Technology
+                <span>Through Workshops</span>
+            </h2>
+
+        </div>
+
+
+        <div class="workshop-card" data-aos="fade-up">
+
+
+            <div class="workshop-image">
+
+                <!-- Replace workshop.jpg with your actual image -->
+
+                <img
+                    src="workshop.png"
+                    alt="STEM Workshop at School of Eminence Ramsara"
+                >
+
+            </div>
+
+
+            <div class="workshop-content">
+
+                <span class="workshop-tag">
+                    1-DAY SCHOOL WORKSHOP
+                </span>
+
+                <h3>
+                    School of Eminence, Ramsara
+                </h3>
+
+                <p>
+                    Conducted a one-day hands-on technology
+                    workshop focused on practical STEM learning,
+                    robotics, electronics and project-based
+                    exploration for school students.
+                </p>
+
+
+                <div class="workshop-highlights">
+
+                    <span>
+                        <i class="fa-solid fa-robot"></i>
+                        Robotics
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-microchip"></i>
+                        Electronics
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-code"></i>
+                        Coding
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-lightbulb"></i>
+                        STEM
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="YOUR_WORKSHOP_IMAGE_LINK"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-primary workshop-link"
+                >
+                    <i class="fa-solid fa-images"></i>
+                    View Workshop Photos
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="stats-section">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+            <div class="stat">
+
+                <i class="fa-solid fa-robot"></i>
+
+                <strong
+                    class="counter"
+                    data-target="7"
+                >
+                    0
+                </strong>
+
+                <span>
+                    Featured Projects
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <strong
+                    class="counter"
+                    data-target="2"
+                >
+                    0
+                </strong>
+
+                <span>
+                    Professional Roles
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <i class="fa-solid fa-certificate"></i>
+
+                <strong
+                    class="counter"
+                    data-target="3"
+                >
+                    0
+                </strong>
+
+                <span>
+                    Certifications
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <i class="fa-solid fa-microchip"></i>
+
+                <strong
+                    class="counter"
+                    data-target="6"
+                >
+                    0
+                </strong>
+
+                <span>
+                    Core Skill Domains
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact" class="section contact-section">
+
+    <div class="container">
+
+        <div class="contact-wrapper">
+
+
+            <div class="contact-info">
+
+                <span class="section-label">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    CONTACT
+                </span>
+
+                <h2>
+                    Let's Build Something
+                    <span>Useful.</span>
+                </h2>
+
+                <p>
+                    Interested in robotics, STEM education,
+                    embedded systems, Android development
+                    or a technology project?
+                    Let's connect.
+                </p>
+
+
+                <div class="contact-methods">
+
+
+                    <a href="mailto:nsingh0399@gmail.com">
+
+                        <div class="contact-icon gmail">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div>
+                            <small>Email</small>
+                            <strong>
+                                nsingh0399@gmail.com
+                            </strong>
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/neeraj-singh-b8b469280/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+
+                        <div class="contact-icon linkedin">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+
+                        <div>
+                            <small>LinkedIn</small>
+                            <strong>
+                                Connect with me
+                            </strong>
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="https://github.com/nsingh0399"
+                        target="_blank"
+                        rel="noopener"
+                    >
+
+                        <div class="contact-icon github">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+
+                        <div>
+                            <small>GitHub</small>
+                            <strong>
+                                github.com/nsingh0399
+                            </strong>
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="https://leetcode.com/u/nsingh0399/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+
+                        <div class="contact-icon leetcode">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <div>
+                            <small>LeetCode</small>
+                            <strong>
+                                nsingh0399
+                            </strong>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <form
+                id="contact-form"
+                class="contact-form"
+                action="https://formspree.io/f/YOUR_FORM_ID"
+                method="POST"
+            >
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Project / Opportunity"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary submit-button"
+                >
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Send Message
+
+                </button>
+
+
+                <p id="form-message"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div>
+
+                <a href="#home" class="logo">
+                    <span>&lt;</span>NS<span>/&gt;</span>
+                </a>
+
+                <p>
+                    Robotics • Embedded • IoT • AI • Android
+                </p>
+
+            </div>
+
+
+            <div class="footer-socials">
+
+                <a
+                    href="mailto:nsingh0399@gmail.com"
+                    aria-label="Gmail"
+                >
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/neeraj-singh-b8b469280/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a
+                    href="https://github.com/nsingh0399"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a
+                    href="https://leetcode.com/u/nsingh0399/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <i class="fa-solid fa-code"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                ©
+                <span id="current-year"></span>
+                Neeraj Singh. Built with passion & code.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<button
+    id="scroll-top"
+    class="scroll-top"
+    aria-label="Scroll to top"
+>
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script
+    src="https://unpkg.com/aos@2.3.4/dist/aos.js"
+></script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
